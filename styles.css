@@ -1,0 +1,161 @@
+:root {
+  /* Primary */
+
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--Cream);
+}
+
+.btn {
+  padding-left: 3.42rem;
+  padding-right: 3.42rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--White);
+  font-weight: 700;
+  background-color: var(--Dark-cyan);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: var(--White);
+  overflow: hidden;
+}
+
+.container__info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.img {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-mb {
+  display: none;
+}
+
+.info--excerpt {
+  color: var(--Dark-grayish-blue);
+  width: 30ch;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+.info--payment {
+  text-align: center;
+}
+.info--subtitle {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--Very-dark-blue);
+  font-weight: 700;
+  width: 11ch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.info--title {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+}
+.payment-btn {
+  text-align: center;
+  display: inline;
+}
+.payment-price {
+  font-family: "Fraunces", serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.price {
+  font-size: 2.28rem;
+  letter-spacing: 42%;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+}
+.price-discount {
+  font-size: 1.16rem;
+  color: var(--Dark-grayish-blue);
+  opacity: 0.75;
+  text-decoration-line: line-through;
+}
+
+@media (max-width: 650px) {
+  .btn {
+    padding-left: 6.42rem;
+    padding-right: 6.42rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container__info {
+    align-items: flex-start;
+    padding: 1.57rem;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .img-mb {
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .info--subtitle {
+    display: inline-block;
+    width: 15ch;
+  }
+
+  .info--excerpt {
+    width: 40ch;
+  }
+
+  .payment-price {
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+  }
+}
